@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Personagens</title>
+
+  <style>
+    #container {
+      border: 2px solid black;
+      width: 300px;
+      padding: 20px;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    img {
+      width: 150px;
+      height: 100px;
+      margin-top: 5px;
+    }
+    p {
+      margin: 5px 0;
+    }
+  </style>
+
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    let personagens = [
+      {
+        nome: "Batman",
+        peso: "70kg",
+        altura: "1.80m",
+        poder: "Rico",
+        profissao: "Empresário",
+        foto: "https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/09/batman-calcada-da-fama.png"
+      },
+      {
+        nome: "Bob Esponja",
+        peso: "20kg",
+        altura: "1.50m",
+        poder: "Transformação",
+        profissao: "Cozinheiro",
+        foto: "https://lojaacal.vteximg.com.br/arquivos/ids/180171-1000-1000/Luminaria-Led-Luz-Guia-1w-Bob-Esponja-Gaya-2-769822.jpg?v=637704365760500000"
+      }
+    ];
+
+    let container = document.getElementById("container");
+
+    personagens.forEach(function(p) {
+      if (p.nome) {
+        let nome = document.createElement("p");
+        nome.innerHTML = "<strong>Nome:</strong> " + p.nome;
+        container.appendChild(nome);
+      }
+
+      if (p.peso) {
+        let peso = document.createElement("p");
+        peso.innerHTML = "<strong>Peso:</strong> " + p.peso;
+        container.appendChild(peso);
+      }
+
+      if (p.altura) {
+        let altura = document.createElement("p");
+        altura.innerHTML = "<strong>Altura:</strong> " + p.altura;
+        container.appendChild(altura);
+      }
+
+      if (p.poder) {
+        let poder = document.createElement("p");
+        poder.innerHTML = "<strong>Poder:</strong> " + p.poder;
+        container.appendChild(poder);
+      }
+
+      if (p.profissao) {
+        let profissao = document.createElement("p");
+        profissao.innerHTML = "<strong>Profissão:</strong> " + p.profissao;
+        container.appendChild(profissao);
+      }
+
+      if (p.foto) {
+        let fotoTitulo = document.createElement("p");
+        fotoTitulo.innerHTML = "<strong>Foto:</strong>";
+        container.appendChild(fotoTitulo);
+
+        let img = document.createElement("img");
+        img.src = p.foto;
+        container.appendChild(img);
+      }
+
+      // Espaço entre os personagens
+      let br = document.createElement("br");
+      container.appendChild(br);
+    });
+  </script>
+</body>
+</html>
+
+ 

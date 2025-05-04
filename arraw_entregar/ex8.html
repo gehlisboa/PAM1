@@ -1,0 +1,28 @@
+<script>
+    let escola = {
+        professores: ['Prof. Diogo', 'Prof. Gabriel'],
+        alunos: ['Geovanna', 'Victoria'],
+        materias: ['Programação Web', 'Banco de Dados']
+    }
+
+    escola.professores.push('Prof. Felipe');
+    escola.alunos.push('Julia')
+    escola.materias.push('Sistemas Embarcados')
+
+    console.log('Professores:')
+    escola.professores.forEach(function(professores){
+        console.log(professores)
+    });
+
+    console.log('\n' + 'Alunos:')
+    escola.alunos.forEach(function(alunos){
+        console.log(alunos)
+    });
+
+    
+    console.log('\n' + 'Materias:')
+    escola.materias.forEach(function(materias){
+        console.log(materias)
+    });
+
+</script>

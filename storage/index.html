@@ -17,4 +17,10 @@
             458748745416,
         ]
     }
+
+    localStorage.setItem('pessoa', JSON.stringify(pessoa));
+    localStorage.removeItem('token');
+
+    let aluno = JSON.parse(localStorage.getItem('pessoa'));
+    console.log(aluno);
 </script>

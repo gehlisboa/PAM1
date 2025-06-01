@@ -1,0 +1,13 @@
+Verifique se existe espaço no início e fim de uma string. Se existir espaços, 
+exiba a mensagem “O Texto é Inválido”, senão exibir “Texto Permitido”. 
+Uma dica é que você poderá encontrar o length ou length-1 para o fim da string.
+
+<script>
+let texto = prompt("Digite um texto:");
+
+if (texto.length !== texto.trim().length) {
+  console.log("O Texto é Inválido");
+} else {
+  console.log("Texto Permitido");
+}
+</script>

@@ -1,0 +1,29 @@
+Crie um algoritmo que aceita nome e sobrenome. 
+O nome será aceito somente se a quantidade de caracteres 
+de ambos forem maior ou igual a 3 dígitos. 
+Se os nomes forem aceitos, 
+irá retornar um objeto com as propriedades:
+PrimeiroNome, SegundoNome, NomeCompleto
+
+<script>
+function nomeSobrenome(nome, sobrenome) {
+
+  if (nome.length >= 3 && sobrenome.length >= 3) {
+    let usuario = {
+      PrimeiroNome: nome,
+      SegundoNome: sobrenome,
+      NomeCompleto: nome + " " +sobrenome
+    };
+    console.log(usuario);
+
+  } else {
+    console.log( "O nome e sobrenome devem ter pelo menos 3 digitos.");
+  }
+}
+
+let nome = prompt("Digite seu nome:");
+let sobrenome = prompt("Digite o seu sobrenome:");
+
+let usuario = nomeSobrenome(nome, sobrenome);
+
+</script>

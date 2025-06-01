@@ -1,0 +1,16 @@
+Crie um programa que irá receber uma string e 
+um caractere de entrada. O programa deverá retornar 
+o número de ocorrências desse caractere na string.
+Ex:
+contarOcorrencias('Banana', 'a');
+//Resultado 3
+
+<script>
+function contarOcorrencias(string, caractere) {
+  let partes = string.split(caractere);
+  let quantidade = partes.length -1;
+
+  console.log(quantidade);
+}
+contarOcorrencias("banana", "a"); 
+</script>

@@ -1,0 +1,25 @@
+Faça um programa que irá substituir os 
+sobrenomes por “Paz” do array abaixo. 
+Faça uso do foreach.
+alunos = [
+	"Pombinha da Silva",
+	"Barraqueira da Silva",
+	"Discórdia da Silva"
+];
+
+<script>
+let alunos = [
+  "Pombinha da Silva",
+  "Barraqueira da Silva",
+  "Discórdia da Silva"
+];
+
+let paz = [];
+
+alunos.forEach(function(nome) {
+  let novoNome = nome.replace("da Silva", "da Paz");
+  paz.push(novoNome);
+});
+
+console.log(paz);
+</script>

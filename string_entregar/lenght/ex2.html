@@ -1,0 +1,20 @@
+Faça um programa que recebe uma string, e exiba uma resposta conforme os critérios abaixo:
+
+- String ≤ 5 responder “Poucos Caracteres”
+- String > 5 e ≤ 10 responder “Boa quantidade de caracteres”
+- String > 10 responder “Inúmeros caracteres encontrados”
+
+<script>
+let string = prompt("Digite uma string:");
+
+if (string.length <= 5) {
+  console.log("Poucos caracteres");
+
+} else if (string.length >5 && string.length <=10) {
+  console.log("Boa quantidade de caracteres");
+
+} else {
+  console.log(string.length + ' números caracteres encontrados');
+}
+
+</script> 

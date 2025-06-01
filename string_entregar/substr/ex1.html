@@ -1,0 +1,13 @@
+Faça um programa que irá retornar o DDI,
+DDD e Número, para um número de telefone fornecido.
+
+<script>
+let telefone = prompt("Digite um número de telefone completo com DDI e DDD. Ex: +5511991705443");
+
+let ddi = telefone.substr(0, 3);      
+let ddd = telefone.substr(3, 2);        
+let numero = telefone.substr(5);      
+
+console.log("DDI: " + ddi + "\nDDD: " + ddd + "\nNumero: " + numero);
+
+</script>

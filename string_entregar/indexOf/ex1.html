@@ -1,0 +1,35 @@
+Faça um programa de forca, pode ser no console mesmo.
+
+Será fornecido uma string, o usuário irá digitar um caractere, e será exibido se existe ou não o caractere na string.
+
+O usuário poderá errar 3 vezes, após isso será exibido que ele não venceu!
+
+<script>
+  let palavraSecreta = "abacaxi";
+  let tentativas = 0;
+  let maximo = 3;
+
+  while (tentativas < maximo) {
+  let letra = prompt("Digite uma letra:");
+
+    if (!letra || letra.length !== 1) {
+      alert("Digite apenas UMA letra.");
+      continue;
+    }
+
+    letra = letra.toLowerCase();
+
+    if (palavraSecreta.indexOf(letra) === -1) {
+      tentativas++;
+      alert("ERROU! A letra" + " " + letra + " " + "não existe.");
+    } else {
+      alert("ACERTOU! A letra" + " " + letra + " " + "existe na palavra.");
+    }
+  }
+
+  if (tentativas === maximo) {
+    console.log("PERDEU! Número máximo de tentativas atingido.");
+  } else {
+    console.log("PARABÉNS! Você descobriu a palavra!");
+  }
+</script>

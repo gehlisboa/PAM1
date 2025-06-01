@@ -1,0 +1,23 @@
+Faça um programa possui um número de telefone e irá verificar se o número é válido ou não. 
+Analise a quantidade mínima de caracteres do número, 
+se possui caracteres especiais ou somente número, dentre outros fatores que você possa observar.
+let numero = 1599655555;
+
+numero = numero.split("");
+
+numero[0]; // 1
+numero[1]; // 5
+
+<script>
+let numero = 15991602587;
+
+// let apenasNumeros = numero.split('');
+
+let quantidade = numero.length === 10 || numero.length === 11;
+
+if (apenasNumeros && quantidade) {
+  console.log("Número de telefone válido!");
+} else {
+  console.log("Número de telefone inválido!");
+}
+</script>

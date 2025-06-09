@@ -9,15 +9,25 @@ numero[0]; // 1
 numero[1]; // 5
 
 <script>
-let numero = 15991602587;
+function validarNumeroTelefone(numero) {
 
-// let apenasNumeros = numero.split('');
+  numero = String(numero);
 
-let quantidade = numero.length === 10 || numero.length === 11;
+  if (!/^\d+$/.test(numero)) {
+    return "Número inválido: deve conter apenas dígitos.";
+  }
+  if (numero.length < 10 || numero.length > 11) {
+    return "Número inválido: deve conter 10 ou 11 dígitos.";
+  }
+  if (numero[0] === '0') {
+    return "Número inválido: DDD não pode começar com 0.";
+  }
+  if (numero.length === 11 && numero[2] !== '9') {
+    return "Número inválido: número de celular deve começar com '9'.";
+  }
 
-if (apenasNumeros && quantidade) {
-  console.log("Número de telefone válido!");
-} else {
-  console.log("Número de telefone inválido!");
+  return "Número válido!";
 }
+
+console.log(validarNumeroTelefone(1599655555));
 </script>

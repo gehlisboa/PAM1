@@ -1,0 +1,38 @@
+### exercicio de sprend e every
+
+- crie um Array com 5 alunos.
+- utilize every para verificar se:
+- todos os alunos são aprovados
+- todos os alunos possuem menos de 18 anos
+- todos os alunos tiraram MB em Inglês
+- todos os nomes começam com a letra A
+
+<script>
+// 1 Criando um array de alunos
+const alunos = [
+  { nome: "Ana", idade: 17, aprovado: true, notaIngles: "MB" },
+  { nome: "Arthur", idade: 16, aprovado: true, notaIngles: "MB" },
+  { nome: "Alice", idade: 15, aprovado: true, notaIngles: "MB" },
+  { nome: "Alex", idade: 14, aprovado: true, notaIngles: "MB" },
+  { nome: "Amanda", idade: 17, aprovado: true, notaIngles: "MB" }
+];
+
+// 2 Clonando o array usando spread operator
+const alunosClone = [...alunos];
+
+// 3 Verificar se todos os alunos são aprovados
+const todosAprovados = alunosClone.every(aluno => aluno.aprovado);
+console.log("Todos aprovados?", todosAprovados); // true
+
+// 4 Verificar se todos possuem menos de 18 anos
+const todosMenores18 = alunosClone.every(aluno => aluno.idade < 18);
+console.log("Todos menores de 18?", todosMenores18); // true
+
+// 5 Verificar se todos tiraram MB em Inglês
+const todosMBIngles = alunosClone.every(aluno => aluno.notaIngles === "MB");
+console.log("Todos tiraram MB em Inglês?", todosMBIngles); // true
+
+// 6 Verificar se todos os nomes começam com a letra "A"
+const todosComecamComA = alunos.every(aluno => aluno.nome[0] === "A");
+console.log("Todos os nomes começam com A?", todosComecamComA); // true
+</script>
